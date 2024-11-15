@@ -6,6 +6,7 @@ import HomeCard from "./_components/HomeCard";
 import FoodCard from "./_components/FoodCard";
 import TracedIcon from "@/icons/TracedIcon";
 import { Typography } from "@mui/material";
+import HomeHeroSection from "./_features/HomeHeroSection";
 
 export default function Home() {
   const [data, setData] = useState();
@@ -18,23 +19,14 @@ export default function Home() {
     fetchData();
   }, []);
   return (
-    <main className="flex justify-center items-center w-screen flex-col">
-      <Header />
-      <div className="h-[788px] flex justify-center items-center w-full bg-[#18BA51] relative">
-        <div className="h-full w-full flex justify-center items-center">
-          <TracedIcon />
-        </div>
-
-        <div className="absolute top-2/5 left-28 w-96">
-          <Typography className="text-[#ffffff] border-b" variant="h3">
-            Pinecone Food delivery
-          </Typography>
-
-          <Typography className="text-[#ffffff] font-semibold" variant="h6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </Typography>
+    <main className="flex justify-center items-center w-screen flex-col gap-20">
+      <div className="flex w-screen justify-center flex-col">
+        <Header />
+        <div className="hidden md:flex">
+          <HomeHeroSection />
         </div>
       </div>
+
       <div className="container flex flex-col justify-between items-center max-w-screen-xl">
         <div className="grid grid-cols-4 w-full">
           <HomeCard
