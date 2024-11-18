@@ -1,12 +1,13 @@
 "use client";
-import { BACKEND_ENDPOINT } from "@/constants/constant";
+import { BACKEND_ENDPOINT } from "@/constants";
 import { useState, useEffect } from "react";
 import Header from "./_components/Header";
-import HomeCard from "./_components/HomeCard";
 import FoodCard from "./_components/FoodCard";
 import TracedIcon from "@/icons/TracedIcon";
 import { Typography } from "@mui/material";
 import HomeHeroSection from "./_features/HomeHeroSection";
+import { foodArray, marketingArray } from "@/constants/mockdatas";
+import MarketingCard from "./_components/MarketingCard";
 
 export default function Home() {
   const [data, setData] = useState();
@@ -27,35 +28,34 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container flex flex-col justify-between items-center max-w-screen-xl">
-        <div className="grid grid-cols-4 w-full">
-          <HomeCard
-            icon="dsad"
-            title="delivery state"
-            detail="request prepare"
-          />
-          <HomeCard
-            icon="dsacas"
-            title="delivery state"
-            detail="request prepare"
-          />
-          <HomeCard
-            icon="casdca"
-            title="delivery state"
-            detail="request prepare"
-          />
-          <HomeCard
-            icon="csadca"
-            title="delivery state"
-            detail="request prepare"
-          />
+      <div className="container flex flex-col justify-center items-center max-w-screen-xl gap-20">
+        <div className="grid grid-cols-4 gap-10">
+          {marketingArray.map((detail) => {
+            return (
+              <div key={detail.id}>
+                <MarketingCard
+                  id={detail.id}
+                  icon={detail.icon}
+                  title={detail.title}
+                  desc={detail.desc}
+                />
+              </div>
+            );
+          })}
         </div>
-        <div>
-          <FoodCard
-            url="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            title="breakfast"
-            price={8000}
-          />
+        <Typography variant="h3">Foods</Typography>
+        <div className="flex flex-wrap justify-between gap-4">
+          {foodArray.map((food) => {
+            return (
+              <div key={food.id}>
+                <FoodCard
+                  imgUrl={food.imgUrl}
+                  foodName={food.foodName}
+                  price={food.price}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </main>

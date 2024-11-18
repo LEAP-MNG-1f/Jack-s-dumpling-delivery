@@ -9,7 +9,7 @@ export default function HomeHeroSection() {
           <div className="absolute top-0 left-0">
             <TracedIcon />
           </div>
-          <div className="flex screen absolute right-0 justify-between items-center ">
+          <div className="flex w-4/5 absolute left-4/5 justify-between items-center ">
             <div className="w-1/3">
               <Typography className="text-[#ffffff] border-b" variant="h3">
                 Pinecone Food delivery
