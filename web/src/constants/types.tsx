@@ -12,3 +12,8 @@ export type foodCardType = {
   categoryName?: string;
   discount?: number;
 };
+
+export type categoryArrayType = {
+  id?: number;
+  categoryName: string;
+};
