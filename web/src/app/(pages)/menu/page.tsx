@@ -1,5 +1,4 @@
-import { FoodListSection } from "../_features";
-import { CategorySection } from "../_features/CategorySection";
+import { CategorySection, FoodListSection } from "@/app/_features";
 
 export default function Page() {
   return (
