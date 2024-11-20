@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href={"/privacy"}>Privacy Policy</Link>
         </div>
         <div className="text-white flex items-center justify-center gap-4  w-full text-4xl ">
-          <Link href={"www.facebook.com"}>
+          <Link href="https://www.facebook.com" target="_blank">
             <Facebook sx={{ fontSize: 40 }} />
           </Link>
           <Link href={"www.Twitter.com"}>
