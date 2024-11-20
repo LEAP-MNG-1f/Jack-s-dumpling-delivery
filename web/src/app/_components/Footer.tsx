@@ -4,11 +4,11 @@ import { Typography } from "@mui/material";
 
 export default function Footer() {
   return (
-    <div className="flex w-screen flex-col relative h-[400px] items-center justify-center bg-[#18BA51]">
+    <div className="flex w-screen flex-col relative h-[400px] items-center justify-center bg-[#18BA51] mt-10">
       <div className="absolute w-full h-full overflow-hidden">
         <img src="../marks.png" />
       </div>
-      <div className="flex flex-col gap-10 w-full">
+      <div className="flex flex-col gap-10 w-full items-center">
         <div className="flex justify-around text-white container">
           <Link href={"/"}>Home</Link>
           <Link href={"/contact"}>Contact</Link>

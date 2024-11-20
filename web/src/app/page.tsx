@@ -19,16 +19,17 @@ export default function Home() {
     fetchData();
   }, []);
   return (
-    <main className="flex justify-between items-center w-screen flex-col gap-20">
-      <div className="flex w-screen items-center justify-center flex-col ">
-        <div className="hidden md:flex w-screen bg-green-600">
+    <main className="flex justify-between items-center w-screen flex-col ">
+      <div className="flex w-screen items-center justify-center flex-col gap-20">
+        {/* ///////////////////////////// */}
+        <div className="hidden md:flex w-screen bg-green-600 ">
           <HomeHeroSection />
         </div>
-      </div>
-      <div className="container flex flex-col justify-center items-center max-w-screen-xl gap-20">
+         {/* ///////////////////////////// */}
         <HomeMarketingSection />
+        {/* ///////////////////////////// */}
         <Typography variant="h3">Foods</Typography>
-
+        {/* ///////////////////////////// */}
         <FoodListSection />
       </div>
     </main>
