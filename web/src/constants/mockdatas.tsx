@@ -27,6 +27,8 @@ export const marketingArray: marketingItemType[] = [
   },
 ];
 
+type IngredientType = string[];
+
 export const foodArray: foodCardType[] = [
   // Category: Pizza
   {
@@ -36,6 +38,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Margherita Pizza",
     price: 8.99,
     categoryName: "Pizza",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Basil", "Olive Oil"],
   },
   {
     id: 2,
@@ -44,6 +47,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Pepperoni Pizza",
     price: 10.99,
     categoryName: "Pizza",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Pepperoni", "Olive Oil"],
   },
   {
     id: 3,
@@ -52,6 +56,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Veggie Pizza",
     price: 9.99,
     categoryName: "Pizza",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Bell Peppers", "Olives", "Onions", "Mushrooms", "Olive Oil"],
   },
   {
     id: 4,
@@ -60,6 +65,7 @@ export const foodArray: foodCardType[] = [
     foodName: "BBQ Chicken Pizza",
     price: 11.99,
     categoryName: "Pizza",
+    ingredients: ["BBQ Sauce", "Mozzarella Cheese", "Grilled Chicken", "Red Onions", "Cilantro"],
   },
 
   // Category: Burgers
@@ -70,6 +76,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Cheeseburger",
     price: 6.99,
     categoryName: "Burgers",
+    ingredients: ["Beef Patty", "Cheddar Cheese", "Lettuce", "Tomato", "Pickles", "Ketchup", "Mustard", "Burger Bun"],
   },
   {
     id: 6,
@@ -78,6 +85,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Double Burger",
     price: 8.99,
     categoryName: "Burgers",
+    ingredients: ["Two Beef Patties", "Cheddar Cheese", "Lettuce", "Tomato", "Onions", "Pickles", "Burger Bun"],
   },
   {
     id: 7,
@@ -86,6 +94,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Veggie Burger",
     price: 7.49,
     categoryName: "Burgers",
+    ingredients: ["Veggie Patty", "Lettuce", "Tomato", "Avocado", "Onions", "Burger Bun", "Vegan Mayonnaise"],
   },
   {
     id: 8,
@@ -94,6 +103,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Chicken Burger",
     price: 7.99,
     categoryName: "Burgers",
+    ingredients: ["Grilled Chicken Patty", "Lettuce", "Tomato", "Mayo", "Pickles", "Burger Bun"],
   },
 
   // Category: Drinks
@@ -104,6 +114,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Coca-Cola",
     price: 1.99,
     categoryName: "Drinks",
+    ingredients: ["Carbonated Water", "Sugar", "Caramel Color", "Caffeine", "Phosphoric Acid"],
   },
   {
     id: 10,
@@ -112,6 +123,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Iced Tea",
     price: 2.49,
     categoryName: "Drinks",
+    ingredients: ["Black Tea", "Ice", "Lemon", "Sugar", "Mint"],
   },
   {
     id: 11,
@@ -120,6 +132,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Lemonade",
     price: 2.99,
     categoryName: "Drinks",
+    ingredients: ["Lemon", "Sugar", "Water", "Ice"],
   },
   {
     id: 12,
@@ -128,6 +141,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Coffee",
     price: 3.49,
     categoryName: "Drinks",
+    ingredients: ["Coffee Beans", "Water", "Milk", "Sugar"],
   },
 
   // Category: Desserts
@@ -138,6 +152,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Chocolate Cake",
     price: 4.99,
     categoryName: "Desserts",
+    ingredients: ["Flour", "Sugar", "Cocoa Powder", "Butter", "Eggs", "Baking Powder", "Chocolate", "Vanilla Extract"],
   },
   {
     id: 14,
@@ -146,6 +161,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Vanilla Ice Cream",
     price: 3.99,
     categoryName: "Desserts",
+    ingredients: ["Milk", "Sugar", "Vanilla Extract", "Eggs", "Cream"],
   },
   {
     id: 15,
@@ -154,6 +170,7 @@ export const foodArray: foodCardType[] = [
     foodName: "Cheesecake",
     price: 5.49,
     categoryName: "Desserts",
+    ingredients: ["Cream Cheese", "Sugar", "Graham Crackers", "Butter", "Eggs", "Vanilla Extract"],
   },
   {
     id: 16,
@@ -162,5 +179,6 @@ export const foodArray: foodCardType[] = [
     foodName: "Brownie",
     price: 4.49,
     categoryName: "Desserts",
+    ingredients: ["Flour", "Sugar", "Cocoa Powder", "Butter", "Eggs", "Vanilla Extract", "Chocolate Chips"],
   },
 ];

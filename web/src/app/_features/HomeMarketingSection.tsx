@@ -1,5 +1,5 @@
 import { marketingArray } from "@/constants/mockdatas";
-import MarketingCard from "../_components/MarketingCard";
+import MarketingCard from "../ui/MarketingCard";
 
 export const HomeMarketingSection = () => {
   return (

@@ -10,6 +10,7 @@ export type foodCardType = {
   foodName: string;
   price: number;
   categoryName?: string;
+  ingredients?: string[];
   discount?: number;
 };
 

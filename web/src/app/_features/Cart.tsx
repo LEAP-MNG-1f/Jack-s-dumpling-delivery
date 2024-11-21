@@ -1,28 +1,27 @@
-import * as React from 'react';
+
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import{ Fragment, useState } from 'react';
 
-
-type Anchor = 'top' | 'left' | 'bottom' | 'right';
+type Anchor = 'right';
 
 export default function AnchorTemporaryDrawer() {
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
+  const [state, setState] = useState({
     right: false,
   });
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
+    (event: KeyboardEvent | MouseEvent) => {
       if (
         event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' ||
-          (event as React.KeyboardEvent).key === 'Shift')
+        ((event as KeyboardEvent).key === 'Tab' ||
+          (event as KeyboardEvent).key === 'Shift')
       ) {
         return;
       }
+console.log("a");
 
       setState({ ...state, [anchor]: open });
     };
@@ -31,17 +30,19 @@ export default function AnchorTemporaryDrawer() {
 
   return (
     <div>
-      {([ 'right'] as const).map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+      {(['right'] as const).map((anchor) => (
+        <Fragment key={anchor}>
+          <button onClick={()=>{toggleDrawer(anchor, true)}}> <ShoppingCartIcon/> My cart</button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
           >
-          <p>haaaadknfdfro'sgnaerp'odgnervi</p>
+          <p>
+            T
+          </p>
           </Drawer>
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   );

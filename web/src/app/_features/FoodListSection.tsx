@@ -1,5 +1,6 @@
 import { foodArray } from "@/constants/mockdatas";
-import FoodCard from "../_components/FoodCard";
+
+import FoodMainCard from "../ui/FoodMainCard";
 
 export const FoodListSection = () => {
   return (
@@ -7,11 +8,7 @@ export const FoodListSection = () => {
       {foodArray.map((food) => {
         return (
           <div key={food.id}>
-            <FoodCard
-              imgUrl={food.imgUrl}
-              foodName={food.foodName}
-              price={food.price}
-            />
+          <FoodMainCard imgUrl={food.imgUrl} foodName={food.foodName} price={food.price}ingredients={food.ingredients}/>
           </div>
         );
       })}
