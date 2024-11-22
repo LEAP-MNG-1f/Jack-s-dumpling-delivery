@@ -1,12 +1,13 @@
 import { MongoClient } from "mongodb";
 
 const connectionString =
-  "mongodb+srv://jamka888:RMkoyKohI5UuhiOP@test1120.nwyip.mongodb.net/";
+  "mongodb+srv://ace12d192:wap3TZLOZeJlgLIq@cluster0.s6jvj.mongodb.net/"
+ 
 const connectDb = async () => {
+
   const client = new MongoClient(connectionString);
-  console.log(client);
-  
   let connection;
+  
   try {
     connection = await client.connect();
   } catch (e) {

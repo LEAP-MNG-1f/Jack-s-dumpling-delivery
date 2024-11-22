@@ -2,12 +2,16 @@ import express, { response } from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import { config } from "dotenv";
-import cloudinary from "cloudinary";
+// import cloudinary from "cloudinary";
 import connectDb from "./connectDB.js";
 config();
 
 const server = express();
 const PORT = 8000 || process.env.DB_URL;
+server.use(cors());
+server.use(bodyParser.json());
+
+
 // const cloudinaryURL = new URL(process.env.CLOUDINARY_URL);
 // cloudinary.config({
 //   cloud_name: cloudinaryURL.hostname,
@@ -15,8 +19,8 @@ const PORT = 8000 || process.env.DB_URL;
 //   api_secret: cloudinaryURL.password,
 // });
 
-server.use(cors());
-server.use(bodyParser.json());
+
+
 // server.get("/", (_, res) => {
 //   res.status(200).json("API server is working");
 // });
@@ -33,14 +37,25 @@ server.use(bodyParser.json());
 //   }
 // });
 
-server.get("/", async (_, res) => {
-  const db = await connectDb();
-  console.log(db);
-  
-  // let collection = db.collection("comments");
-  // let results = await collection.find().limit(10).toArray();
-  // response.json({ success: true, data: results });
- 
+server.post("/", async (req, res) => {
+  try {
+    const data = await connectDb();
+    let collection = data.collection("product");
+
+    let results = await collection.findOneAndDelete(
+      { owner: "sarnaiB" }, 
+      
+    );
+
+    res.json({ success: true, data: results });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+server.post("/create-user", async (req, res) => {
+  const data = await connectDb();
+  let collection = data.collection("users");
 });
 
 server.listen(PORT, () => {
