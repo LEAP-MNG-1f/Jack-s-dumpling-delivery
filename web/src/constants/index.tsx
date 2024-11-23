@@ -9,6 +9,7 @@ export const categoriesArray: categoryArrayType[] = [
   { id: 4, categoryName: "Main Foods" },
   { id: 5, categoryName: "Deserts" },
   { id: 6, categoryName: "Beverages" },
+  { id: 7, categoryName: "All" },
 ];
 
 const modifiedArray = [
