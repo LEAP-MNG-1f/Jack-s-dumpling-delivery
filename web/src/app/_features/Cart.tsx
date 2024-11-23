@@ -54,11 +54,8 @@ export default function AnchorTemporaryDrawer() {
   return (
     <>
       <Fragment>
-        <Button
-          onClick={toggleDrawer("right", true)}
-          startIcon={<ShoppingCart sx={{ color: "black" }} />}
-          className="!text-black"
-        >
+        <Button onClick={toggleDrawer("right", true)} className="!text-black">
+          <ShoppingCart sx={{ color: "black" }} />
           My Cart
         </Button>
         <Drawer
