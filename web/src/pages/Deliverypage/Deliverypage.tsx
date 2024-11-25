@@ -47,7 +47,7 @@ export default function Deliverypage() {
   }, []);
 
   return (
-    <div className="w-screen flex flex-col  items-center justify-center gap-8">
+    <div className="w-screen flex flex-col  items-center justify-center gap-8 pt-20">
       <div className="container max-w-screen-xl flex flex-col  items-center justify-center ">
         <div className="w-full flex flex-col items-center justify-center  gap-2">
           <div className=" w-full flex justify-between">
