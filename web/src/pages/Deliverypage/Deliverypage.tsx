@@ -9,6 +9,7 @@ export default function Deliverypage() {
     name: "appartment",
     index: index + 1,
   }));
+  console.log(arr);
 
   const mapRef = useRef(null);
   const mapInstance = useRef(null);

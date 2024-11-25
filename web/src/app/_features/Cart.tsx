@@ -2,10 +2,9 @@ import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import { ShoppingCart } from "@mui/icons-material";
 import { Typography } from "@mui/material";
-
+import CartFoodCard from "../_components/CartFoodCard";
 import React, { Fragment, useState } from "react";
 import { GreenButton } from "../ui";
-import CartFoodCard from "../ui/CartFoodCard";
 
 type Anchor = "right";
 
@@ -70,19 +69,21 @@ export default function AnchorTemporaryDrawer() {
                 <Typography variant="h5" className=" p-5 border-b-2">
                   Your Cart
                 </Typography>
-              </div>
-              {/* Cart Items */}
-              <div className="flex flex-col gap-3 px-4 overflow-y-auto">
-                {cartItems.map((item, index) => (
-                  <CartFoodCard
-                    key={index}
-                    imgUrl={item.imgUrl}
-                    foodName={item.foodName}
-                    price={item.price}
-                  />
-                ))}
+
+                {/* Cart Items */}
+                <div className="flex flex-col gap-3 px-4 overflow-y-auto">
+                  {cartItems.map((item, index) => (
+                    <CartFoodCard
+                      key={index}
+                      imgUrl={item.imgUrl}
+                      foodName={item.foodName}
+                      price={item.price}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
+
             {/* Footer */}
             <div className="shadow flex justify-around items-center  p-4 border-t">
               <div>
