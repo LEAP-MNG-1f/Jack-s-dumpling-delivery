@@ -47,7 +47,12 @@ export const foodArray: foodCardType[] = [
     foodName: "Pepperoni Pizza",
     price: 10.99,
     categoryName: "Pizza",
-    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Pepperoni", "Olive Oil"],
+    ingredients: [
+      "Tomato Sauce",
+      "Mozzarella Cheese",
+      "Pepperoni",
+      "Olive Oil",
+    ],
   },
   {
     id: 3,
@@ -56,7 +61,15 @@ export const foodArray: foodCardType[] = [
     foodName: "Veggie Pizza",
     price: 9.99,
     categoryName: "Pizza",
-    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Bell Peppers", "Olives", "Onions", "Mushrooms", "Olive Oil"],
+    ingredients: [
+      "Tomato Sauce",
+      "Mozzarella Cheese",
+      "Bell Peppers",
+      "Olives",
+      "Onions",
+      "Mushrooms",
+      "Olive Oil",
+    ],
   },
   {
     id: 4,
@@ -65,7 +78,13 @@ export const foodArray: foodCardType[] = [
     foodName: "BBQ Chicken Pizza",
     price: 11.99,
     categoryName: "Pizza",
-    ingredients: ["BBQ Sauce", "Mozzarella Cheese", "Grilled Chicken", "Red Onions", "Cilantro"],
+    ingredients: [
+      "BBQ Sauce",
+      "Mozzarella Cheese",
+      "Grilled Chicken",
+      "Red Onions",
+      "Cilantro",
+    ],
   },
 
   // Category: Burgers
@@ -76,7 +95,16 @@ export const foodArray: foodCardType[] = [
     foodName: "Cheeseburger",
     price: 6.99,
     categoryName: "Burgers",
-    ingredients: ["Beef Patty", "Cheddar Cheese", "Lettuce", "Tomato", "Pickles", "Ketchup", "Mustard", "Burger Bun"],
+    ingredients: [
+      "Beef Patty",
+      "Cheddar Cheese",
+      "Lettuce",
+      "Tomato",
+      "Pickles",
+      "Ketchup",
+      "Mustard",
+      "Burger Bun",
+    ],
   },
   {
     id: 6,
@@ -85,7 +113,15 @@ export const foodArray: foodCardType[] = [
     foodName: "Double Burger",
     price: 8.99,
     categoryName: "Burgers",
-    ingredients: ["Two Beef Patties", "Cheddar Cheese", "Lettuce", "Tomato", "Onions", "Pickles", "Burger Bun"],
+    ingredients: [
+      "Two Beef Patties",
+      "Cheddar Cheese",
+      "Lettuce",
+      "Tomato",
+      "Onions",
+      "Pickles",
+      "Burger Bun",
+    ],
   },
   {
     id: 7,
@@ -94,7 +130,15 @@ export const foodArray: foodCardType[] = [
     foodName: "Veggie Burger",
     price: 7.49,
     categoryName: "Burgers",
-    ingredients: ["Veggie Patty", "Lettuce", "Tomato", "Avocado", "Onions", "Burger Bun", "Vegan Mayonnaise"],
+    ingredients: [
+      "Veggie Patty",
+      "Lettuce",
+      "Tomato",
+      "Avocado",
+      "Onions",
+      "Burger Bun",
+      "Vegan Mayonnaise",
+    ],
   },
   {
     id: 8,
@@ -103,7 +147,14 @@ export const foodArray: foodCardType[] = [
     foodName: "Chicken Burger",
     price: 7.99,
     categoryName: "Burgers",
-    ingredients: ["Grilled Chicken Patty", "Lettuce", "Tomato", "Mayo", "Pickles", "Burger Bun"],
+    ingredients: [
+      "Grilled Chicken Patty",
+      "Lettuce",
+      "Tomato",
+      "Mayo",
+      "Pickles",
+      "Burger Bun",
+    ],
   },
 
   // Category: Drinks
@@ -114,7 +165,13 @@ export const foodArray: foodCardType[] = [
     foodName: "Coca-Cola",
     price: 1.99,
     categoryName: "Drinks",
-    ingredients: ["Carbonated Water", "Sugar", "Caramel Color", "Caffeine", "Phosphoric Acid"],
+    ingredients: [
+      "Carbonated Water",
+      "Sugar",
+      "Caramel Color",
+      "Caffeine",
+      "Phosphoric Acid",
+    ],
   },
   {
     id: 10,
@@ -152,7 +209,16 @@ export const foodArray: foodCardType[] = [
     foodName: "Chocolate Cake",
     price: 4.99,
     categoryName: "Desserts",
-    ingredients: ["Flour", "Sugar", "Cocoa Powder", "Butter", "Eggs", "Baking Powder", "Chocolate", "Vanilla Extract"],
+    ingredients: [
+      "Flour",
+      "Sugar",
+      "Cocoa Powder",
+      "Butter",
+      "Eggs",
+      "Baking Powder",
+      "Chocolate",
+      "Vanilla Extract",
+    ],
   },
   {
     id: 14,
@@ -170,7 +236,14 @@ export const foodArray: foodCardType[] = [
     foodName: "Cheesecake",
     price: 5.49,
     categoryName: "Desserts",
-    ingredients: ["Cream Cheese", "Sugar", "Graham Crackers", "Butter", "Eggs", "Vanilla Extract"],
+    ingredients: [
+      "Cream Cheese",
+      "Sugar",
+      "Graham Crackers",
+      "Butter",
+      "Eggs",
+      "Vanilla Extract",
+    ],
   },
   {
     id: 16,
@@ -179,6 +252,49 @@ export const foodArray: foodCardType[] = [
     foodName: "Brownie",
     price: 4.49,
     categoryName: "Desserts",
-    ingredients: ["Flour", "Sugar", "Cocoa Powder", "Butter", "Eggs", "Vanilla Extract", "Chocolate Chips"],
+    ingredients: [
+      "Flour",
+      "Sugar",
+      "Cocoa Powder",
+      "Butter",
+      "Eggs",
+      "Vanilla Extract",
+      "Chocolate Chips",
+    ],
+  },
+];
+
+export const cartItems = [
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1730758405638-ab8659278e96?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    foodName: "Uul",
+    price: 20000,
+    quantity: 2,
+    ingredients: [
+      "Flour",
+      "Sugar",
+      "Cocoa Powder",
+      "Butter",
+      "Eggs",
+      "Vanilla Extract",
+      "Chocolate Chips",
+    ],
+  },
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1730758405638-ab8659278e96?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    foodName: "Uul",
+    price: 20000,
+    quantity: 3,
+    ingredients: [
+      "Flour",
+      "Sugar",
+      "Cocoa Powder",
+      "Butter",
+      "Eggs",
+      "Vanilla Extract",
+      "Chocolate Chips",
+    ],
   },
 ];

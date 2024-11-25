@@ -9,15 +9,15 @@ import {
 } from "@/app/_features";
 
 export default function Homepage() {
-  const [data, setData] = useState();
-  const fetchData = async () => {
-    const response = await fetch(`${BACKEND_ENDPOINT}`);
-    const datas = await response.json();
-    setData(datas);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // const [data, setData] = useState();
+  // const fetchData = async () => {
+  //   const response = await fetch(`${BACKEND_ENDPOINT}`);
+  //   const datas = await response.json();
+  //   setData(datas);
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   return (
     <main className="flex justify-between items-center w-screen flex-col ">
       <div className="flex w-screen items-center justify-center flex-col gap-20">

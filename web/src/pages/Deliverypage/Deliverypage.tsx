@@ -20,7 +20,6 @@ export default function Deliverypage() {
 
       if (!apiKey) {
         console.log("google map error");
-
         return;
       }
       try {
@@ -58,8 +57,8 @@ export default function Deliverypage() {
               </Typography>
               <div className="flex gap-4">
                 <div className="flex flex-col gap-2">
-                  <p className="border-b-2 border-green-600 text-center">
-                    zone 1
+                  <p className="border-b-2 border-green-600 text-center text-2xl">
+                    Zone 1
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     {arr.map((bair, index) => {
@@ -76,10 +75,10 @@ export default function Deliverypage() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p className="border-b-2 border-green-600 text-center">
-                    zone 2
+                  <p className="border-b-2 border-green-600 text-center text-2xl">
+                    Zone 2
                   </p>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4 ">
                     {arr.map((bair, index) => {
                       return (
                         <div

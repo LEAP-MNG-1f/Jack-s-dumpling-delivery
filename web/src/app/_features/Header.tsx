@@ -14,7 +14,9 @@ export default function Header() {
     <header className="w-screen h-10 flex justify-center items-center mb-2 fixed bg-white z-20">
       <div className="w-full flex justify-between items-center max-w-screen-xl">
         <div className="flex gap-2">
-          <div className="font-bold text-lg">LOGO</div>
+          <div className="font-bold text-lg flex items-center justify-center">
+            LOGO
+          </div>
           <Link href="/">
             <HeaderButton buttonName="Home" pathname={pathname} path="/" />
           </Link>

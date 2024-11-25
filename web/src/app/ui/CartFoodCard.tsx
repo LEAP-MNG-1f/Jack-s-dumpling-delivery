@@ -19,6 +19,7 @@ export default function CartFoodCard({
     <div className="h-[182px] flex rounded border p-4 shadow-lg gap-4">
       <CardMedia
         component={"img"}
+        className="!rounded-2xl"
         sx={{ width: 245, height: 150 }}
         image={imgUrl}
         alt="food"

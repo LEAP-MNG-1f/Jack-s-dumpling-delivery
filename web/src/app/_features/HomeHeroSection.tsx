@@ -18,13 +18,13 @@ export const HomeHeroSection = () => {
           </div>
 
           <img
-            className="z-10 right-20 "
+            className="z-10 right-10 "
             src="./huurga.png"
             width={"400px"}
             alt="ricePhoto"
           />
           <img
-            className="absolute z-20 right-20 "
+            className="absolute z-10 right-20 "
             src="./budaatai.png"
             width={"300px"}
             alt="ricePhoto"
