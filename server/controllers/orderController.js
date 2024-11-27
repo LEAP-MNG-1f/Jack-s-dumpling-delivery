@@ -6,7 +6,7 @@ const createOrder = async (req, res) => {
 };
 
 const getOrders = async (_, res) => {
-  const orders = await OrderModel.find();
+  const orders = await OrderModel.find().populate("User").populate("Food");
   res.status(200).json({ success: true, result: orders });
 };
 

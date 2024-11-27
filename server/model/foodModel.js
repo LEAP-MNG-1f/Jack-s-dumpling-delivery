@@ -5,8 +5,8 @@ const foodSchema = new Schema({
   name: { type: String, required: true },
   image: { type: String, required: true },
   ingredients: { type: String, required: true },
-  price: { type: Number, required: true },
-  categoryId:{type:SchemaTypes.ObjectId, ref:"Category", required:true}
+  price: { type: String, required: true },
+  categoryID:{type:SchemaTypes.ObjectId, ref:"Category", required:true}
 });
 
 export const FoodModel = model("Food", foodSchema);

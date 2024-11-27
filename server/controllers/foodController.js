@@ -6,7 +6,7 @@ const createFood = async (req, res) => {
 };
 
 const getFoods = async (_, res) => {
-  const result = await FoodModel.find();
+  const result = await FoodModel.find().populate("Category");
   res.status(200).json({ success: true, data: result });
 };
 
