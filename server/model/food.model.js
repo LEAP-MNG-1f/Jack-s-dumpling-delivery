@@ -1,7 +1,6 @@
 import {model,Schema, SchemaTypes} from "mongoose";
 
-const foodSchema = new Schema({
-  userID: {type: String, ref:"Order",required:true},
+const foodSchema = Schema({
   name: { type: String, required: true },
   image: { type: String, required: true },
   ingredients: { type: String, required: true },

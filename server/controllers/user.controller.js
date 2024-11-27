@@ -1,4 +1,4 @@
-import { UserModel } from "../model/userModel.js";
+import { UserModel } from "../model/user.model.js";
 
 const getUsers = async (_, res) => {
   const result = await UserModel.find();
@@ -15,21 +15,7 @@ const deleteUser = async (req, res) => {
   res.status(201).json({ success: true, data: result });
 };
 const updateUser = async (req, res) => {
-  const { _id, name, email, password, phoneNumber } = req.body;
-
-  if (!_id) {
-    return console.log("id is required");
-  }
-
-  const updateFields = {};
-  if (name) updateFields.name = name;
-  if (email) updateFields.email = email;
-  if (password) updateFields.password = password;
-  if (phoneNumber) updateFields.phoneNumber = phoneNumber;
-
-  const result = await UserModel.findByIdAndUpdate(_id, updateFields, {
-    new: true,
-  });
+  const result = await UserModel.findByIdAndUpdate(req.body);
   res.status(201).json({ success: true, data: result });
 };
 
