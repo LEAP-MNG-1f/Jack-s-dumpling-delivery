@@ -24,7 +24,7 @@ export default function FoodPaymentList() {
       </div>
 
       <div className="h-4 w-full flex justify-between items-center p-6">
-        <div className="w-1/2">
+        <div className="w-1/2 border rounded-xl">
           <Typography variant="h6">Total Amount</Typography>
           {totalAmount} ₮
         </div>

@@ -1,10 +1,11 @@
-import mongoose from "mongoose";
+import {Schema, SchemaTypes, model} from "mongoose";
 
 const EnumProcess = ["waiting", "cooking", "delivery"];
 
-const orderSchema = new mongoose.Schema({
+const orderSchema =  Schema({
+  userID:{type:SchemaTypes.ObjectId, ref:"user", required:true},
   orderNumber: { type: Number, required: true },
-  foods: { type: [String], required: true },
+  foods: { type: [SchemaTypes.ObjectId], ref: "Food",required: true },
   totalPrice: { type: Number, required: true },
   process: { type: String, enum: EnumProcess, default: "waiting" },
   createdDate: { type: Date, required: true },
@@ -13,4 +14,4 @@ const orderSchema = new mongoose.Schema({
   apartment: { type: String, required: true },
 });
 
-export const OrderModel = mongoose.model("order", orderSchema);
+export const OrderModel = model("Order", orderSchema);

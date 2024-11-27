@@ -38,10 +38,10 @@ export default function FoodMainCard(props: foodCardType) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <div className="absolute h-1/2 w-1/3 top-[25%] left-[30%] bg-white rounded-2xl shadow-xl p-4 flex gap-2">
+        <div className="absolute h-1/2  top-[25%] left-[30%] bg-white rounded-2xl shadow-xl p-4 flex gap-2">
           <CardMedia
             component="img"
-            className="!rounded-2xl !h-full !w-full cover"
+            className="!rounded-2xl !h-full !w- cover"
             src={props.imgUrl}
             alt="photo"
           />

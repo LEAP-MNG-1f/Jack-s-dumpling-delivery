@@ -11,7 +11,7 @@ type paymentPageProps = {
 };
 export default function PaymentPage({ title, step }: paymentPageProps) {
   return (
-    <div className="flex pt-5">
+    <div className="flex pt-5 border p-2 rounded-2xl w-[480px]">
       <Checkbox
         {...label}
         icon={<PanoramaFishEyeIcon />}

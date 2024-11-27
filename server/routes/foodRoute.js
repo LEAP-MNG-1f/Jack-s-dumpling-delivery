@@ -7,9 +7,9 @@ import {
 } from "../controllers/foodController.js";
 const foodRouter = express.Router();
 
-foodRouter.post("/createfood", createFood);
+foodRouter.post("/food", createFood);
 foodRouter.get("/foods", getFoods);
-foodRouter.put("/updatefood", putFood);
-foodRouter.delete("/deletefood", deleteFood);
+foodRouter.put("/food", putFood);
+foodRouter.delete("/food", deleteFood);
 
-export default foodRouter;
+export {foodRouter};

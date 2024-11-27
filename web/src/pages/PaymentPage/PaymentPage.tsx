@@ -5,8 +5,8 @@ import PaymentAddressForm from "@/app/_features/PaymentAddressFrom";
 
 export default function PaymentPage() {
   return (
-    <main className="flex pt-10 h-screen  justify-center">
-      <div className="w-1/2 flex flex-col px-20 gap-4">
+    <main className="flex pt-10 w-screen h-2/3 justify-center items-center">
+      <div className="w-1/2 flex flex-col items-end justify-center px-20 gap-4">
         <div className="w-1/2 flex flex-col gap-2">
           <PaymentStep title="Insert address" step="1" />
           <div className="w-[480px] rounded-2xl h-[480px] flex items-center justify-center border p-2">

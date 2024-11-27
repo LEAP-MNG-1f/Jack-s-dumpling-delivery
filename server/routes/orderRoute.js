@@ -8,8 +8,9 @@ import {
 
 const orderRouter = express.Router();
 
-orderRouter.post("/createorder", createOrder);
+orderRouter.post("/order", createOrder);
 orderRouter.get("/orders", getOrders);
-orderRouter.delete("/deleteorder", deleteOrder);
-orderRouter.put("/updateorder", updateOrder);
-export default orderRouter;
+orderRouter.delete("/order", deleteOrder);
+orderRouter.put("/order", updateOrder);
+
+export  {orderRouter}

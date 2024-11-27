@@ -3,11 +3,8 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import userRouter from "./routes/userRoute.js";
-import orderRouter from "./routes/orderRoute.js";
-import foodRouter from "./routes/foodRoute.js";
-import categoryRouter from "./routes/categoryRoute.js";
-// dotenv
+import {categoryRouter, foodRouter, orderRouter, userRouter} from "./routes/index.js";
+
 dotenv.config();
 // connect to MongoDB
 mongoose.connect(
