@@ -4,7 +4,7 @@ import {
   getFoods,
   deleteFood,
   putFood,
-} from "../controllers/foodController.js";
+} from "../controllers/food.controller.js";
 const foodRouter = express.Router();
 
 foodRouter.post("/food", createFood);

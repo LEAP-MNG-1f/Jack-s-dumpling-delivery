@@ -1,4 +1,4 @@
-import { categoryModel } from "../model/categoryModel.js";
+import { categoryModel } from "../model/category.model.js";
 
 const getCategory = async (_, res) => {
   const result = await categoryModel.find();
@@ -9,6 +9,7 @@ const addCategory = async (req, res) => {
   const result = await categoryModel.create(req.body);
   res.status(201).json({ success: true, data: result });
 };
+
 const deleteCategory = async (req, res) => {
   try {
     const result = await categoryModel.findByIdAndDelete(req.body);

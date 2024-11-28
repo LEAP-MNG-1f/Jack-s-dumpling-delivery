@@ -4,7 +4,7 @@ import {
   getCategory,
   deleteCategory,
   updateCategory,
-} from "../controllers/categoryController.js";
+} from "../controllers/category.controller.js";
 
 const categoryRouter = express.Router();
 

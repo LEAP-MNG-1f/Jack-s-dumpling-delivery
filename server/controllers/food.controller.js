@@ -1,8 +1,7 @@
 import { FoodModel } from "../model/food.model.js";
 
 const createFood = async (req, res) => {
-  const result = await FoodModel.create(req.body);
-  
+  const result = await FoodModel.create();
   res.status(201).json({ success: true, data: result });
 };
 

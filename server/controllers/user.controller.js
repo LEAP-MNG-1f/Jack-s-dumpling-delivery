@@ -6,14 +6,16 @@ const getUsers = async (_, res) => {
 };
 
 const createUser = async (req, res) => {
-  const result = await UserModel.insertMany(req.body);
+  const result = await UserModel.create(req.body);
   res.status(201).json({ success: true, data: result });
 };
+
 
 const deleteUser = async (req, res) => {
   const result = await UserModel.findOneAndDelete({ _id: req.body });
   res.status(201).json({ success: true, data: result });
 };
+
 const updateUser = async (req, res) => {
   const result = await UserModel.findByIdAndUpdate(req.body);
   res.status(201).json({ success: true, data: result });
