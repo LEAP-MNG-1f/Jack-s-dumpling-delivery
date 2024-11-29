@@ -1,11 +1,11 @@
 "use client";
 
+import { HeaderButton } from "@/app/_component/ui/HeaderButton";
 import PersonIcon from "@mui/icons-material/Person";
 import Link from "next/link";
-import { useState } from "react";
-import Cart from "./Cart";
-import { HeaderButton } from "../ui";
-import { usePathname } from "next/dist/client/components/navigation";
+import { usePathname } from "next/navigation";
+import Cart from "./Cart"
+
 
 export default function Header() {
   const pathname = usePathname() ?? undefined;

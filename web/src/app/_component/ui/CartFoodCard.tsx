@@ -6,7 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { GreenButton } from "../ui";
+import { GreenButton } from "./GreenButton";
+
 
 export default function CartFoodCard({
   imgUrl,

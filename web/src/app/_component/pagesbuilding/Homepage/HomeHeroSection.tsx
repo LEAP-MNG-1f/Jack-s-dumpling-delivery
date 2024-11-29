@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
 
 export const HomeHeroSection = () => {
-  return (
-    <div className="h-[480px] w-full flex justify-center relative">
+  return (<div className="bg-green-600 h-[480px] w-[full]">
+        <div className="h-[480px] w-full flex justify-center relative">
       <div className="flex items-center justify-center container ">
         <div className="absolute top-0 left-0 w-full h-full">
-          <img src="../marks.png" />
+          <img src="../marks.png" className="w-full h-full object-cover" />
         </div>
         <div className="flex items-center justify-between">
           <div className="w-1/3">
@@ -22,15 +22,16 @@ export const HomeHeroSection = () => {
             src="./huurga.png"
             width={"400px"}
             alt="ricePhoto"
-          />
+            />
           <img
             className="absolute z-10 right-20 "
             src="./budaatai.png"
             width={"300px"}
             alt="ricePhoto"
-          />
+            />
         </div>
       </div>
     </div>
+            </div>
   );
 };

@@ -1,12 +1,9 @@
-import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import { ShoppingCart } from "@mui/icons-material";
-import { Typography } from "@mui/material";
-
-import React, { Fragment, useState } from "react";
-import { GreenButton } from "../ui";
-import CartFoodCard from "../ui/CartFoodCard";
 import { cartItems } from "@/constants/mockdatas";
+import { ShoppingCart } from "@mui/icons-material";
+import { Button, Drawer, Typography } from "@mui/material";
+import { Fragment, useState } from "react";
+import { GreenButton } from "../ui/GreenButton";
+import CartFoodCard from "../ui/CartFoodCard";
 
 type Anchor = "right";
 
@@ -28,12 +25,7 @@ export default function AnchorTemporaryDrawer() {
       setState({ ...state, [anchor]: open });
     };
 
-  const calculateTotal = () => {
-    return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-  };
+  
 
   return (
     <>
@@ -74,11 +66,12 @@ export default function AnchorTemporaryDrawer() {
               <div>
                 <Typography variant="h6">Total Amount</Typography>
                 <Typography variant="h6" color="green">
-                  {calculateTotal().toLocaleString()} MNT
+                
                 </Typography>
               </div>
               <button>
-                <GreenButton buttonName="Order Food" />
+                <GreenButton
+                 buttonName="Order Food" />
               </button>
             </div>
           </div>

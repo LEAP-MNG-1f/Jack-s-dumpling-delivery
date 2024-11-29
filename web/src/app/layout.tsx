@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./_component/_features/Header";
+import Footer from "./_component/_features/Footer";
+import AdminHeader from "./_component/_features/AdminHeader";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
 
 export const metadata: Metadata = {
   title: "Dumbling Service",
@@ -22,13 +16,19 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) 
+
+
+
+{
+  const admin = false
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        {admin && <AdminHeader/>}
+        {!admin && <Header/>}
         {children}
+        {!admin && <Footer/>}
       </body>
     </html>
   );
