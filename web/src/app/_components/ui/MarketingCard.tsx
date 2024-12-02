@@ -3,9 +3,15 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-import { marketingItemType } from "@/constants/types";
 
-export default function MarketingCard(props: marketingItemType) {
+type marketingItemProps = {
+  id: number;
+  icon: string;
+  title: string;
+  desc: string;
+};
+
+export default function MarketingCard(props: marketingItemProps) {
   return (
     <Card sx={{ maxWidth: 245 }}>
       <CardActionArea>

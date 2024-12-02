@@ -1,4 +1,9 @@
-import Menupage from "../_component/pagesbuilding/Menupage/Menupage"
+import Menupage from "../_components/pagesbuilding/Menupage/Menupage";
 
-export default function Page(){
-    return <><Menupage/></>}
+export default function Page() {
+  return (
+    <>
+      <Menupage />
+    </>
+  );
+}

@@ -1,16 +1,17 @@
-import { cartItems } from "@/constants/mockdatas";
 import { ShoppingCart } from "@mui/icons-material";
 import { Button, Drawer, Typography } from "@mui/material";
 import { Fragment, useState } from "react";
 import { GreenButton } from "../ui/GreenButton";
 import CartFoodCard from "../ui/CartFoodCard";
-
+import { useCart } from "../context/CartContext";
 type Anchor = "right";
 
 export default function AnchorTemporaryDrawer() {
   const [state, setState] = useState({
     right: false,
   });
+
+  const { cartFoods } = useCart();
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -24,8 +25,6 @@ export default function AnchorTemporaryDrawer() {
       }
       setState({ ...state, [anchor]: open });
     };
-
-  
 
   return (
     <>
@@ -49,13 +48,8 @@ export default function AnchorTemporaryDrawer() {
 
                 {/* Cart Items */}
                 <div className="flex flex-col gap-3 px-4 overflow-y-auto">
-                  {cartItems.map((item, index) => (
-                    <CartFoodCard
-                      key={index}
-                      imgUrl={item.imgUrl}
-                      foodName={item.foodName}
-                      price={item.price}
-                    />
+                  {cartFoods.map((food) => (
+                    <CartFoodCard id={food.id} key={food.id} />
                   ))}
                 </div>
               </div>
@@ -65,13 +59,10 @@ export default function AnchorTemporaryDrawer() {
             <div className="shadow flex justify-around items-center  p-4 border-t">
               <div>
                 <Typography variant="h6">Total Amount</Typography>
-                <Typography variant="h6" color="green">
-                
-                </Typography>
+                <Typography variant="h6" color="green"></Typography>
               </div>
               <button>
-                <GreenButton
-                 buttonName="Order Food" />
+                <GreenButton buttonName="Order Food" />
               </button>
             </div>
           </div>

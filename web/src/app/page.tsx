@@ -1,9 +1,9 @@
-import Homepage from "./_component/pagesbuilding/Homepage/Homepage";
+import Homepage from "./_components/pagesbuilding/Homepage/Homepage";
 
 export default function Page() {
   return (
     <>
-      <Homepage/>
+      <Homepage />
     </>
   );
 }

@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./_component/_features/Header";
-import Footer from "./_component/_features/Footer";
-import AdminHeader from "./_component/_features/AdminHeader";
 
-
+import AdminHeader from "./_components/features/AdminHeader";
+import Header from "./_components/features/Header";
+import Footer from "./_components/features/Footer";
+import { CartProvider } from "./_components/context/CartContext";
 
 export const metadata: Metadata = {
   title: "Dumbling Service",
@@ -16,19 +15,17 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) 
-
-
-
-{
-  const admin = false
+}>) {
+  const admin = false;
   return (
     <html lang="en">
       <body>
-        {admin && <AdminHeader/>}
-        {!admin && <Header/>}
-        {children}
-        {!admin && <Footer/>}
+        <CartProvider>
+          {admin && <AdminHeader />}
+          {!admin && <Header />}
+          {children}
+          {!admin && <Footer />}
+        </CartProvider>
       </body>
     </html>
   );

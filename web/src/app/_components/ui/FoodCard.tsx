@@ -1,13 +1,34 @@
 "use client";
-import { foodCardType } from "@/constants/types";
-import { Button, CardMedia, Modal, Typography } from "@mui/material";
+import { CardMedia, Modal, Typography } from "@mui/material";
 import { useState } from "react";
 import { GreenButton } from "./GreenButton";
+import { useCart } from "../context/CartContext";
 
-export default function FoodMainCard(props: foodCardType) {
+type foodCardProps = {
+  id: number;
+  imgUrl: string;
+  foodName: string;
+  price: number;
+  categoryName?: string;
+  ingredients?: string[];
+  discount?: number;
+};
+
+export default function FoodCard({
+  id,
+  foodName,
+  price,
+  imgUrl,
+}: foodCardProps) {
+  const {
+    getFoodQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    addCart,
+  } = useCart();
+
+  const quantity = getFoodQuantity(id);
   const [open, setOpen] = useState(false);
-  const [amount, setAmount] = useState(0);
-
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -18,16 +39,16 @@ export default function FoodMainCard(props: foodCardType) {
           <CardMedia
             component="img"
             className="!rounded-2xl !h-[189px] !w-[282px]"
-            src={props.imgUrl}
+            src={imgUrl}
             alt="photo"
           />
-          <Typography>{props.discount}</Typography>
+          {/* <Typography>{discount}</Typography> */}
           <div className="flex flex-col h--50">
             <Typography gutterBottom variant="h6">
-              {props.foodName}
+              {foodName}
             </Typography>
             <Typography variant="h6" className="text-[#18BA51]">
-              {props.price}
+              {price}
             </Typography>
           </div>
         </div>
@@ -42,16 +63,16 @@ export default function FoodMainCard(props: foodCardType) {
           <CardMedia
             component="img"
             className="!rounded-2xl !h-full !w- cover"
-            src={props.imgUrl}
+            src={imgUrl}
             alt="photo"
           />
           <div className="flex flex-col gap-2 h-full w-1/2 justify-between">
             <div className="">
               <Typography variant="h5" sx={{ mt: 2 }}>
-                {props.foodName}
+                {foodName}
               </Typography>
               <Typography variant="h6" sx={{ color: "green" }}>
-                {props.price}
+                {price}
               </Typography>
             </div>
             <Typography variant="body1">ingredients:</Typography>
@@ -59,19 +80,18 @@ export default function FoodMainCard(props: foodCardType) {
               variant="body2"
               sx={{ color: "grey", wrap: "flex-wrap", width: "200px" }}
             >
-              {props.ingredients?.slice(1, 4).toString()}
+              {/* {ingredients?.slice(1, 4).toString()} */}
             </Typography>
             <div className="flex gap-4 items-center justify-center">
-              <button onClick={() => setAmount(amount - 1)}>
+              <button onClick={() => decreaseCartQuantity(id)}>
                 <GreenButton buttonName="-" />
               </button>
-              <Typography>{amount}</Typography>
-              <button onClick={() => setAmount(amount + 1)}>
+              <Typography>{quantity}</Typography>
+              <button onClick={() => increaseCartQuantity(id)}>
                 <GreenButton buttonName="+" />
               </button>
             </div>
-
-            <button>
+            <button onClick={() => addCart(id, quantity)}>
               <GreenButton buttonName="Insert cart" />
             </button>
           </div>

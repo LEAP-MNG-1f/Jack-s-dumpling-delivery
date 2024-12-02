@@ -1,3 +1,3 @@
-export const Minus = (quantity:number)=> Math.max(0, quantity-1)
-export const Plus = (quantity: number)=>quantity+1 
-export const stopPropagation = ()=>{stopPropagation()}
+export  const stop = (e: React.SyntheticEvent) => {
+      e.stopPropagation();
+    }
